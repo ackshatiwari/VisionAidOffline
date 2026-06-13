@@ -1,0 +1,8 @@
+.home__container {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  flex-direction: row;
+}

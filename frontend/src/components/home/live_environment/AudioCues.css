@@ -1,0 +1,192 @@
+.audiocues {
+  background: #090e1a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  width: 580px;
+  height: 366px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.audiocues__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #131d31;
+}
+
+.audiocues__title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #e2e8f0;
+}
+
+.audiocues__body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Left Section - Speaker status */
+.audiocues__left {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-right: 1px solid #131d31;
+  padding: 20px;
+}
+
+.audiocues__speaker-ring {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #eab308;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.audiocues__speaker-ring:hover {
+  transform: scale(1.05);
+}
+
+.audiocues__listening-text {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Right Section - Audio Cues list */
+.audiocues__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.audiocues__right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.audiocues__right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.audiocues__right::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+.audiocues__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #475569;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.audiocues__cue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #131d31;
+  animation: slideIn 0.3s ease-out;
+}
+
+.audiocues__cue:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.audiocues__cue-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.audiocues__indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.audiocues__cue-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.audiocues__cue-text {
+  font-size: 13px;
+  color: #f1f5f9;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.audiocues__cue-time {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* Bottom Footer */
+.audiocues__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid #131d31;
+  background: #080c16;
+}
+
+
+.audiocues__voice-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.audiocues__dropdown {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  padding-right: 4px;
+}
+
+.audiocues__dropdown option {
+  background: #0f172a;
+  color: #94a3b8;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
