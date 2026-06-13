@@ -1,10 +1,13 @@
 # router for fastapi
 # pyrefly: ignore [missing-import]
 import io
+import logging
 from fastapi import APIRouter, File, UploadFile, HTTPException
+
+logger = logging.getLogger(__name__)
 from PIL import Image
 from ultralytics import YOLO
-from routes.helper_methods.yolo_helpers import get_angle_direction_and_distance, OBJECT_HEIGHTS
+from routes.helper_methods.yolo_helpers import get_angle_direction_and_distance
 
 router = APIRouter()
 
@@ -29,7 +32,6 @@ async def detect_objects(file: UploadFile = File(...)):
         # Get frame dimensions
         frame_width = image.width
         frame_height = image.height
-        frame_area = frame_width * frame_height
 
         # Lazy load model if loading failed at startup
         global model
@@ -50,31 +52,25 @@ async def detect_objects(file: UploadFile = File(...)):
                 cls = int(box.cls[0])
                 label = result.names[cls]
 
-                # Filter out objects that do not pose a navigation hazard for a blind person
-                if label not in OBJECT_HEIGHTS:
-                    continue
-
                 # Convert xyxy [xmin, ymin, xmax, ymax] to xywh [xmin, ymin, w, h] for helper function
                 xmin, ymin, xmax, ymax = xyxy
                 w = xmax - xmin
                 h = ymax - ymin
                 bbox = [xmin, ymin, w, h]
 
-                # Calculate position and distance cues only if the confidence is greater than 0.5 to prevent false positives
                 if confidence > 0.5:
                     angle, distance, direction = get_angle_direction_and_distance(bbox, frame_width, label)
-
-                detections.append({
-                    "box": xyxy,
-                    "confidence": confidence,
-                    "class": label,
-                    "angle": angle,
-                    "distance": distance,
-                    "direction": direction
-                })
+                    detections.append({
+                        "box": xyxy,
+                        "confidence": confidence,
+                        "class": label,
+                        "angle": angle,
+                        "distance": distance,
+                        "direction": direction
+                    })
 
         return {"predictions": detections}
 
     except Exception as e:
+        logger.exception("500 error in /yolo/detect: %s", e)
         raise HTTPException(status_code=500, detail=f"Failed to process image: {str(e)}")
-

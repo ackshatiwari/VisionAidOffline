@@ -1,0 +1,173 @@
+.system {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 860px;
+}
+
+.system__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.system__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 0;
+}
+
+.system__subtitle {
+  font-size: 13px;
+  color: #4b5563;
+  margin: 0;
+}
+
+.system__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.system__card {
+  background: #0d1a0d;
+  border: 1px solid #1f2a1f;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.system__card--full {
+  grid-column: 1 / -1;
+}
+
+.system__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.system__card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #d1fae5;
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Status table */
+.system__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.system__table td {
+  padding: 7px 0;
+  border-bottom: 1px solid #1a2a1a;
+  color: #6b7280;
+}
+
+.system__table tr:last-child td {
+  border-bottom: none;
+}
+
+.system__table td:last-child {
+  text-align: right;
+}
+
+.system__val {
+  color: #f9fafb !important;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.system__badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.system__badge--green { background: #14532d; color: #22c55e; }
+.system__badge--blue  { background: #1e3a5f; color: #60a5fa; }
+.system__badge--red   { background: #3b0a0a; color: #ef4444; }
+
+/* Performance metrics */
+.system__metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.system__metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #1a2a1a;
+  font-size: 13px;
+}
+
+.system__metric:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.system__metric-label {
+  color: #6b7280;
+}
+
+.system__metric-value {
+  font-weight: 700;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  color: #f9fafb;
+}
+
+/* Diagnostics */
+.system__diag-log {
+  background: #050d05;
+  border: 1px solid #1a2a1a;
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 100px;
+}
+
+.system__diag-line {
+  font-size: 12px;
+  font-family: ui-monospace, Consolas, monospace;
+  color: #22c55e;
+  margin: 0;
+}
+
+.system__diag-line--muted {
+  color: #4b5563;
+}
+
+.system__diag-btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #22c55e;
+  color: #000;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.system__diag-btn:hover { opacity: 0.85; }
+.system__diag-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.system__diag-btn--running {
+  background: #4b5563;
+  color: #9ca3af;
+}

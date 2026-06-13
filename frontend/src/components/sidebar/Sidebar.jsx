@@ -3,19 +3,17 @@ import { useLanguage } from '../../context/LanguageContext'
 
 const NAV_ITEMS = [
   { id: 'home', key: 'home', icon: HomeIcon },
-  { id: 'environment', key: 'environment', icon: EnvironmentIcon },
-  { id: 'audio', key: 'audio', icon: AudioIcon },
+  { id: 'priority_filter', key: 'priorityFilter', icon: FilterIcon },
   { id: 'settings', key: 'settings', icon: SettingsIcon },
-  { id: 'system', key: 'system', icon: SystemIcon },
-  { id: 'about', key: 'about', icon: AboutIcon },
+  { id: 'system', key: 'system', icon: SystemIcon }
 ]
 
-export default function Sidebar({ activePage, onNavigate }) {
+export default function Sidebar({ activePage, onNavigate, onLogoClick }) {
   const { t } = useLanguage()
 
   return (
     <aside className="sidebar">
-      <div className="sidebar__brand">
+      <div className="sidebar__brand" onClick={onLogoClick} style={{ cursor: onLogoClick ? 'pointer' : 'default' }} title="Back to home">
         <BrandLogo />
         <div>
           <p className="sidebar__brand-name">VisionAId Congo</p>

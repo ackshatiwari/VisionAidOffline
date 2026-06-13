@@ -1,15 +1,13 @@
 # Map of indoor objects that can pose a navigation/trip/collision hazard to blind people
 OBJECT_HEIGHTS = {
     # Structure & Architectural Hazards
-    "wall": 2.4,
-    "walls": 2.4,
     "stairs": 2.0,
     "staircase": 2.0,
     "steps": 1.0,
     "door": 2.0,
     "doorway": 2.0,
     "window": 1.2,
-    
+
     # Furniture & Large Obstacles
     "chair": 0.8,
     "stool": 0.6,
@@ -25,20 +23,20 @@ OBJECT_HEIGHTS = {
     "sink": 0.85,
     "oven": 0.85,
     "microwave": 0.35,
-    
+
     # Electronics (large TVs can be bumped/damaged)
     "tv": 0.5,
-    
+
     # Dynamic Obstacles
     "person": 1.7,
 }
 
-DEFAULT_HEIGHT = 0.5  # meters
+DEFAULT_HEIGHT = 1.0  # meters
 
 def get_angle_direction_and_distance(bbox, frame_width, label, focal_length=640):
     """
     Calculates angle, cardinal direction, and real-world distance (in meters) to an object.
-    
+
     bbox format: [xmin, ymin, width, height]
     """
     x, w = bbox[0], bbox[2]
