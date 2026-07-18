@@ -1,5 +1,4 @@
-Made with ❤️ for TillyHacks 2026
-
+### Won 'Special Prize -- Iteration Machine' in DSH Hacks
 ---
 
 # VisionAid Offline
@@ -158,4 +157,4 @@ Lingala has no built-in browser TTS voice — the system falls back to French, t
 
 ---
 
-## Built for TillyHacks 2026 🌍
+## Built for DSH Hacks 2026 🌍
