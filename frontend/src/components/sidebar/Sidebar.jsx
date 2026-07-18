@@ -16,7 +16,7 @@ export default function Sidebar({ activePage, onNavigate, onLogoClick }) {
       <div className="sidebar__brand" onClick={onLogoClick} style={{ cursor: onLogoClick ? 'pointer' : 'default' }} title="Back to home">
         <BrandLogo />
         <div>
-          <p className="sidebar__brand-name">VisionAId Congo</p>
+          <p className="sidebar__brand-name">VisionAid Offline</p>
           <p className="sidebar__brand-tagline">{t('appTagline')}</p>
         </div>
       </div>

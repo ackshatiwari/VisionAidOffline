@@ -32,13 +32,14 @@ export default function Webcam({ onDetections }) {
     onDetections?.([])
   }, [onDetections])
 
-  // Start on mount, stop on unmount
+  /*// Start on mount, stop on unmount
   useEffect(() => {
     startCamera()
     return () => {
       streamRef.current?.getTracks().forEach(t => t.stop())
     }
   }, [])
+  */
 
   // Frame capture + YOLO polling
   useEffect(() => {

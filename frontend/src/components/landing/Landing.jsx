@@ -17,7 +17,7 @@ export default function Landing({ onEnter }) {
         </div>
 
         <h1 className="landing__title">
-          VisionAId <span className="landing__title-accent">Congo</span>
+          VisionAid <span className="landing__title-accent">Offline</span>
         </h1>
         <p className="landing__tagline">See the world. Move with confidence.</p>
         <p className="landing__desc">
