@@ -1,5 +1,4 @@
-Made with ❤️ for TillyHacks 2026
-
+### Won 'Special Prize -- Iteration Machine' in DSH Hacks
 ---
 
 # VisionAId Congo
