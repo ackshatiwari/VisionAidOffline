@@ -2,17 +2,17 @@ Made with ❤️ for TillyHacks 2026
 
 ---
 
-# VisionAId Congo
+# VisionAid Offline
 
 > **Turning a standard laptop into a full awareness system for the visually impaired in the DRC.**
 
-VisionAId Congo scans the environment in real time, identifies objects, and converts detections into directional audio cues that tell the user what is around them and where — replicating the situational awareness that sighted people take for granted. Everything runs on-device with no internet connection and under 100ms of latency.
+VisionAid Offline scans the environment in real time, identifies objects, and converts detections into directional audio cues that tell the user what is around them and where — replicating the situational awareness that sighted people take for granted. Everything runs on-device with no internet connection and under 100ms of latency.
 
 ---
 
 ## The Problem
 
-In the Democratic Republic of Congo, access to assistive technology for the visually impaired is severely limited. Cloud-dependent tools fail without reliable internet. Specialist hardware is unaffordable. VisionAId Congo is built for this reality — running entirely on a standard laptop, offline, in the local languages.
+In the Democratic Republic of Congo, access to assistive technology for the visually impaired is severely limited. Cloud-dependent tools fail without reliable internet. Specialist hardware is unaffordable. VisionAid Offline is built for this reality — running entirely on a standard laptop, offline, in the local languages.
 
 ---
 
